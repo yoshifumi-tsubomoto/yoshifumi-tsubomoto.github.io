@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>清書と要約を使う（OpenAI・Gemini）（講義メモ）｜Tsubomoto Lab.</title><meta name="description" content="セッションのあとで、録音をていねいに文字にし直し（清書）、要約も自動で作ります。自分の API キーを使います。"><meta property="og:title" content="清書と要約を使う（OpenAI・Gemini）（講義メモ）｜Tsubomoto Lab."><meta property="og:description" content="セッションのあとで、録音をていねいに文字にし直し（清書）、要約も自動で作ります。自分の API キーを使います。"><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet"><script data-goatcounter="https://tsubomoto-lab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><link rel="stylesheet" href="/_astro/Base.DkMuVB_Q.css"></head><body><header class="site-header"><div class="wrap header-inner"><a href="/" class="brand" aria-label="Tsubomoto Lab. トップへ"><svg class="logo" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="var(--paper)" stroke="var(--navy)" stroke-width="1.5"></circle><ellipse cx="20" cy="20" rx="13" ry="5.2" fill="none" stroke="var(--navy)" stroke-width="1.2" transform="rotate(-30 20 20)"></ellipse><ellipse cx="20" cy="20" rx="13" ry="5.2" fill="none" stroke="var(--teal)" stroke-width="1.2" transform="rotate(30 20 20)"></ellipse><circle cx="20" cy="20" r="3.2" fill="var(--navy)"></circle><circle cx="31.3" cy="13.5" r="2" fill="var(--teal)"></circle></svg><span class="brand-text"><span class="brand-name">Tsubomoto Lab.</span><span class="brand-sub">教室のための、小さなソフトウェア</span></span></a><nav class="nav" aria-label="サイトの案内"><a href="/#apps">アプリ</a><a href="/news/">お知らせ</a><a href="/about/">このサイトについて</a><a href="/search/">検索</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSd9N9QK0rY9jTGNF2HcpDyVbXDLzyhA-qtZ2tM7VUrqhZBQEg/viewform" target="_blank" rel="noopener">連絡</a></nav></div></header><main data-pagefind-body><section class="app-hero slim hue-teal"><div class="wrap"><p class="crumb mono tiny"><a href="/#apps">アプリ</a> / <a href="/apps/kougi-memo/">講義メモ</a> / <a href="/apps/kougi-memo/#install">導入方法</a></p><h1>清書と要約を使う（OpenAI・Gemini）</h1><p class="lead">セッションのあとで、録音をていねいに文字にし直し（清書）、要約も自動で作ります。自分の API キーを使います。</p></div></section><div class="wrap app-layout"><aside class="spec-card"><div class="mono label">Method data</div><dl class="spec"><dt>難しさ</dt><dd class="stars">★★☆</dd><dt>時間</dt><dd>約15分（はじめの1回）</dd><dt>費用</dt><dd>使った分（1時間の録音で、清書が約50〜60円、要約は1円未満。OpenAI whisper-1 のとき）</dd><dt>アカウント</dt><dd>OpenAI のアカウント、または Google AI Studio のアカウント（どちらも支払いの設定が必要）</dd><dt>向いている人</dt><dd>文字起こしを正確にしたい人・要約まで手早く作りたい人</dd><dt>データの場所</dt><dd>OpenAI または Google（清書と要約のときだけ）</dd><dt>確かめた日</dt><dd>2026年11月16日</dd></dl></aside><div class="app-main"><div class="callout info"><strong>端末の外にデータを置く方法です。</strong><dl class="callout-list"><dt>外に出るもの</dt><dd>清書するときは、そのセッションの録音。要約を作るときは、そのセッションの文字起こしとメモ</dd><dt>何が分かるか</dt><dd>送る録音や文字起こしには、講義の中身がそのまま入ります。人の名前などが話の中に出てくれば、それも含まれます</dd><dt>置き場所</dt><dd>OpenAI または Google（清書と要約のときだけ）</dd><dt>補足</dt><dd>使う前に、学校や職場のきまりを確かめてください。Gemini は、かならず有料の枠（支払いの設定をしたキー）で使ってください。無料の枠では、送った音声や文章が Google の AI の学習に使われることがあります。</dd></dl><span class="small">学校の情報管理のきまりで使えるかを確かめてから使ってください。</span></div><article class="prose"><h2 id="しくみ">しくみ</h2>
+<p>リアルタイムの文字起こしは、速さを優先するので誤りが出ます。セッションが終わったら、録音を OpenAI か Gemini に送り、ていねいに文字にし直します（清書）。清書した文字から、要約も自動で作れます。</p>
+<ul>
+<li>送るのは、「✨ 清書する」「✨ 要約を作る」を押したセッションの分だけです。押す前に、送ってよいかを確認します</li>
+<li>API キーは、あなたの端末のブラウザの中にだけ保存します。作者には届きません</li>
+<li>清書が済んだ録音は、消して場所をあけられます</li>
+</ul>
+<h2 id="2つの方法">2つの方法</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>OpenAI</th>
+<th>Gemini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>清書のしかた</td>
+<td>文字起こし専用の AI（whisper-1 など）。細かい時刻が付く</td>
+<td>音声を読ませて、時刻付きで書き起こさせる</td>
+</tr>
+<tr>
+<td>費用（1時間）</td>
+<td>約50〜60円（whisper-1）、約25〜30円（gpt-4o-mini-transcribe）</td>
+<td>約15〜25円（2.5 Flash）</td>
+</tr>
+<tr>
+<td>必要なもの</td>
+<td>OpenAI のアカウントと API キー（支払いの設定）</td>
+<td>Google AI Studio の API キー（<strong>支払いの設定をした有料の枠</strong>）</td>
+</tr>
+</tbody>
+</table>
+<p>費用は 2026年11月16日の各社の料金をもとにしためやすです。料金は変わることがあります。実際に使った額は、各サービスの管理画面で確かめてください。</p>
+<h2 id="手順のあらまし">手順のあらまし</h2>
+<ol>
+<li>OpenAI（platform.openai.com）か Google AI Studio（aistudio.google.com）で、API キーを作ります。支払いの設定もします</li>
+<li>講義メモの「⚙ 設定」→「清書（高精度の文字起こし）の方法」で、OpenAI か Gemini を選びます</li>
+<li>出てきた欄に、API キーを貼り付けます</li>
+<li>セッションを終了したら、「まとめ・出力」の「✨ 清書する」を押します</li>
+<li>清書が終わったら、「✨ 要約を作る」を押します</li>
+</ol>
+<p>くわしい手順は、講義メモの手引きの <a href="https://github.com/yoshifumi-tsubomoto/kougi-memo/blob/main/guide/08-seisho.md">8. 清書する</a> を見てください。</p>
+<h2 id="気をつけること">気をつけること</h2>
+<ul>
+<li>清書や要約は AI が作るものです。大事なところは、録音やメモと見比べて確かめてください</li>
+<li>共用のパソコンには、API キーを入れないでください</li>
+<li><strong>サービスの決まりは、予告なく変わります。</strong> 使い始める前と、ときどき、各サービスのデータの扱いと料金を確かめてください</li>
+</ul>
+</article><p class="tiny muted mono">サービスの画面や料金は変わることがあります（2026年11月16日 に確かめた内容です）。</p><section class="block"><h2 class="h-sm">ほかの導入方法</h2><ul class="link-list"><li><a href="/apps/kougi-memo/browser/"><span>ブラウザで開くだけ</span><span class="stars tiny">★☆☆</span></a></li><li><a href="/apps/kougi-memo/phone/"><span>スマホと連携する</span><span class="stars tiny">★☆☆</span></a></li></ul></section></div></div></main><footer class="site-footer"><div class="wrap footer-inner"><div><div class="brand footer-brand"><svg class="logo" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="var(--paper)" stroke="var(--navy)" stroke-width="1.5"></circle><ellipse cx="20" cy="20" rx="13" ry="5.2" fill="none" stroke="var(--navy)" stroke-width="1.2" transform="rotate(-30 20 20)"></ellipse><ellipse cx="20" cy="20" rx="13" ry="5.2" fill="none" stroke="var(--teal)" stroke-width="1.2" transform="rotate(30 20 20)"></ellipse><circle cx="20" cy="20" r="3.2" fill="var(--navy)"></circle><circle cx="31.3" cy="13.5" r="2" fill="var(--teal)"></circle></svg><span class="brand-name">Tsubomoto Lab.</span></div><p class="muted small">中学校の理科教師が、授業と校務の「こまった」から作ったアプリを紹介します。</p></div><ul class="footer-links"><li><a href="/#apps">アプリの一覧</a></li><li><a href="/about/">このサイトについて・アクセス解析</a></li><li><a href="/disclaimer/">免責事項</a></li><li><a href="/#feedback">このサイトへの意見・リクエスト</a></li><li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd9N9QK0rY9jTGNF2HcpDyVbXDLzyhA-qtZ2tM7VUrqhZBQEg/viewform" target="_blank" rel="noopener">連絡・意見のフォーム</a></li><li><a href="https://github.com/yoshifumi-tsubomoto" target="_blank" rel="noopener">GitHub</a></li></ul></div><div class="wrap mono tiny muted footer-note">© 2026 坪本 吉史（中学校 理科）</div></footer><script type="module">var e=matchMedia(`(prefers-reduced-motion: reduce)`).matches,t=matchMedia(`(hover: hover) and (pointer: fine)`).matches;!e&&t&&document.querySelectorAll(`[data-tilt]`).forEach(e=>{let t=Number(e.dataset.tilt)||8,n=0;e.addEventListener(`pointermove`,r=>{let i=e.getBoundingClientRect(),a=(r.clientX-i.left)/i.width,o=(r.clientY-i.top)/i.height;cancelAnimationFrame(n),n=requestAnimationFrame(()=>{e.style.setProperty(`--rx`,`${(.5-o)*t}deg`),e.style.setProperty(`--ry`,`${(a-.5)*t}deg`),e.style.setProperty(`--mx`,`${a*100}%`),e.style.setProperty(`--my`,`${o*100}%`),e.classList.add(`tilting`)})}),e.addEventListener(`pointerleave`,()=>{cancelAnimationFrame(n),e.classList.remove(`tilting`),e.style.setProperty(`--rx`,`0deg`),e.style.setProperty(`--ry`,`0deg`)})});var n=document.querySelectorAll(`.app-card, .principle, .voice, .feature, .install-card, .reuse-card, .reuse-rule, .section-head, .placeholder, .link-list`);if(!e&&`IntersectionObserver`in window){let e=new IntersectionObserver(t=>t.forEach(t=>{t.isIntersecting&&(t.target.classList.add(`shown`),e.unobserve(t.target))}),{rootMargin:`0px 0px -8% 0px`});n.forEach(t=>{let n=t.parentElement?Array.from(t.parentElement.children):[];t.style.setProperty(`--delay`,`${Math.min(n.indexOf(t),5)*90}ms`),t.classList.add(`reveal`),e.observe(t)})}</script></body></html>
