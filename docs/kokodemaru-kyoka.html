@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ココデマルの使用について（許可を得るための資料・ひな形）</title>
+<meta name="robots" content="noindex">
+<style>
+  @page { size: A4; margin: 10mm 12mm; }
+  :root { --ink: #1f2328; --muted: #57606a; --line: #8c959f; --soft: #eef1f4; --accent: #1f6feb; }
+  * { box-sizing: border-box; }
+  html { background: #e9ecef; }
+  body {
+    margin: 0; color: var(--ink); background: #fff;
+    font: 10pt/1.32 "BIZ UDPGothic", "Yu Gothic UI", "Yu Gothic", "Meiryo", "Hiragino Sans", sans-serif;
+  }
+  .page { width: 210mm; min-height: 297mm; margin: 8mm auto; padding: 10mm 12mm; background: #fff; box-shadow: 0 1px 6px rgba(0,0,0,.15); }
+  @media print {
+    html, body { background: #fff; }
+    .page { width: auto; min-height: 0; margin: 0; padding: 0; box-shadow: none; }
+  }
+  header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid var(--ink); padding-bottom: 2mm; margin-bottom: 3mm; }
+  h1 { font-size: 15pt; margin: 0; letter-spacing: .02em; }
+  .meta { font-size: 9pt; color: var(--muted); text-align: right; white-space: nowrap; }
+  .lead { margin: 0 0 3mm; }
+  h2 { font-size: 11pt; margin: 3mm 0 1.2mm; padding-left: 2mm; border-left: 4px solid var(--accent); }
+  p { margin: 0 0 1.5mm; }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 2mm; table-layout: fixed; }
+  th, td { border: 1px solid var(--line); padding: .7mm 1.5mm; vertical-align: top; text-align: left; }
+  th { background: var(--soft); font-weight: bold; font-size: 9.5pt; }
+  .data col.c1 { width: 21%; } .data col.c2 { width: 43%; } .data col.c3 { width: 36%; }
+  .ask col.c1 { width: 52%; } .ask col.c2 { width: 22%; } .ask col.c3 { width: 26%; }
+  .ask td { height: 9mm; vertical-align: middle; }
+  .check { line-height: 1.5; }
+  .ask .no { display: inline-block; width: 1.4em; font-weight: bold; }
+  .check { white-space: nowrap; font-size: 9.5pt; vertical-align: middle; }
+  .check span { display: inline-block; margin-right: 1.5mm; }
+  .check span::before { content: ""; display: inline-block; width: 3mm; height: 3mm; border: 1px solid var(--ink); margin-right: .8mm; vertical-align: -0.4mm; }
+  .note { font-size: 9pt; color: var(--muted); }
+  ul.rules { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 1.2mm 4mm; font-size: 9.5pt; }
+  ul.rules li { border-left: 2px solid var(--soft); padding-left: 2mm; }
+  ul.rules li b { display: block; }
+  .opinion { border: 1px solid var(--line); height: 16mm; padding: 1.2mm 1.8mm; font-size: 9pt; color: var(--muted); margin-bottom: 2mm; }
+  .sign { display: flex; justify-content: flex-end; gap: 10mm; font-size: 9.5pt; margin-top: 2mm; }
+  .sign span { border-bottom: 1px solid var(--ink); min-width: 45mm; display: inline-block; padding-bottom: .5mm; }
+  b { font-weight: bold; }
+  .howto { max-width: 210mm; margin: 8mm auto 0; padding: 3mm 5mm; background: #fff8c5; border: 1px solid #d4a72c; border-radius: 2mm; font-size: 10pt; }
+  .howto ul { margin: 1mm 0 0; padding-left: 5mm; }
+  .page[contenteditable]:focus { outline: 2px dashed #d4a72c; outline-offset: 2mm; }
+  @media print { .howto { display: none; } }
+  .try { background: var(--soft); padding: 2mm 3mm; border-radius: 1.5mm; font-size: 9.5pt; margin: 0 0 2mm; }
+  .try a { color: var(--accent); text-decoration: none; word-break: break-all; }
+  .qrs { display: flex; gap: 6mm; margin-top: 1.5mm; }
+  .qrs figure { display: flex; align-items: center; gap: 2.5mm; margin: 0; flex: 1; }
+  .qrs svg { width: 20mm; height: 20mm; flex: none; background: #fff; padding: 1mm; }
+  .qrs figcaption { font-size: 8.5pt; line-height: 1.35; }
+  .page { position: relative; }
+  .pno { position: absolute; bottom: 6mm; left: 0; right: 0; text-align: center; font-size: 8.5pt; color: var(--muted); }
+  @media print { .page { min-height: 277mm; } .page + .page { break-before: page; } }
+  .ask td { height: 12mm; }
+  .opinion { height: 40mm; }
+</style>
+</head>
+<body>
+<div class="howto">
+  <b>この資料について</b>：ココデマルを使いたい先生が、学校で許可を得るときに使うひな形です（ココデマル 1.7.0 の内容）。
+  <ul>
+    <li>文字をクリックすると、その場で書き換えられます。提出日・申請者を書き、学校に合わない項目（Gemini・生徒ダッシュボード・バックアップの置き場所など）は消してください。</li>
+    <li>書き換えたら、Ctrl＋P で印刷するか、「PDF に保存」してください（A4・2枚）。書き換えた内容は、このページを閉じると消えます。</li>
+    <li>この説明の枠は、印刷されません。</li>
+  </ul>
+</div>
+<div class="page" contenteditable="true" spellcheck="false">
+
+  <header>
+    <h1>採点アプリ「ココデマル」の使用について</h1>
+    <div class="meta">提出日　　　年　　月　　日<br>申請者</div>
+  </header>
+
+  <p class="lead">定期考査などの採点に、採点アプリ「ココデマル」を使いたいと考えています。使ってよいかどうか、ご判断をお願いします。答案の画像と点数は、採点に使う端末のブラウザの中だけに保存します。外のサービスに送るのは、下の表で「送る」とした場合だけです。</p>
+
+  <h2>ココデマルとは</h2>
+  <p>スキャンした答案（PDF）を、ブラウザだけで採点するアプリです。インストールはいらず、Chrome・Edge・Chromebook で開いて使います。〇✕の記入、返却用 PDF、成績の Excel、生徒が自分の結果を見る画面（生徒ダッシュボード）を作れます。作者が個人で作り、無料で公開しています。</p>
+  <div class="try">
+    <div class="try-text"><b>試してみるには</b>：右の QR コードを開くと、架空の生徒10人の答案が入った体験用のテストで、すぐに採点を試せます。体験用も、いつも使うアプリと同じものです。データは開いた端末の中だけにあり、外には送りません。試し終わったら、画面の上の「体験を終えて、自分のテストを始める」で消せます。体験用のテストには、本物の名簿や答案を入れられないようにしてあります。</div>
+    <div class="qrs">
+      <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges"><path fill="#ffffff" d="M0 0h33v33H0z"/><path stroke="#000000" d="M0 0.5h7m2 0h2m1 0h1m3 0h1m1 0h3m2 0h1m2 0h7M0 1.5h1m5 0h1m3 0h3m2 0h2m1 0h1m1 0h3m3 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h3m3 0h1m1 0h1m3 0h3m1 0h1m1 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h1m2 0h2m2 0h1m2 0h1m3 0h3m1 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h4m3 0h2m1 0h1m2 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h1m1 0h1m6 0h3m2 0h1m3 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h4m2 0h1m1 0h1m1 0h4M0 8.5h1m1 0h5m2 0h1m3 0h2m2 0h1m1 0h2m1 0h1m1 0h1m1 0h5M1 9.5h5m2 0h1m2 0h4m1 0h8m2 0h2m1 0h2m1 0h1M0 10.5h1m2 0h5m2 0h2m1 0h3m1 0h1m2 0h2m2 0h1m1 0h1m1 0h1m1 0h2M0 11.5h6m1 0h7m2 0h4m1 0h2m1 0h3m1 0h4M1 12.5h1m1 0h7m1 0h1m2 0h1m1 0h1m3 0h1m1 0h4m1 0h3m1 0h1M0 13.5h2m1 0h1m1 0h1m3 0h2m4 0h1m1 0h2m2 0h3m2 0h1m3 0h3M1 14.5h2m2 0h2m1 0h2m4 0h4m2 0h3m1 0h3m1 0h1m2 0h1M0 15.5h3m1 0h2m1 0h6m2 0h1m5 0h2m2 0h2m1 0h1m1 0h1M0 16.5h4m2 0h1m2 0h2m3 0h2m1 0h1m2 0h1m1 0h1m1 0h2m1 0h2m3 0h1M0 17.5h1m3 0h2m1 0h2m4 0h1m4 0h4m1 0h1m1 0h3m1 0h4M0 18.5h2m3 0h3m1 0h1m1 0h1m3 0h2m1 0h1m6 0h4m1 0h2M2 19.5h2m5 0h2m5 0h1m3 0h2m1 0h8M0 20.5h1m1 0h1m3 0h1m2 0h4m1 0h1m3 0h1m3 0h1m1 0h2m1 0h3m2 0h1M0 21.5h3m1 0h2m1 0h1m4 0h1m1 0h4m2 0h1m1 0h2m2 0h2m1 0h1m2 0h1M0 22.5h1m1 0h1m2 0h4m1 0h5m4 0h1m1 0h2m3 0h1m1 0h1m2 0h1M0 23.5h1m3 0h1m2 0h1m1 0h2m3 0h1m1 0h1m2 0h5m1 0h1m2 0h4M0 24.5h1m2 0h4m1 0h2m1 0h1m2 0h1m2 0h1m1 0h2m1 0h7M8 25.5h1m2 0h1m1 0h1m2 0h6m1 0h2m3 0h1m1 0h1m1 0h1M0 26.5h7m2 0h1m3 0h1m1 0h1m1 0h1m2 0h5m1 0h1m1 0h1m1 0h2M0 27.5h1m5 0h1m1 0h3m4 0h4m1 0h5m3 0h3M0 28.5h1m1 0h3m1 0h1m1 0h2m1 0h2m2 0h2m2 0h1m4 0h6m1 0h1M0 29.5h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h2m1 0h2m4 0h1m1 0h1m2 0h1m2 0h2M0 30.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h5m2 0h2m1 0h1m2 0h2m1 0h2M0 31.5h1m5 0h1m3 0h1m3 0h2m3 0h4m3 0h1m1 0h3M0 32.5h7m1 0h1m3 0h1m2 0h3m1 0h1m3 0h5m3 0h1"/></svg>
+<figcaption><b>アプリ</b><br><a href="https://yoshifumi-tsubomoto.github.io/kokodemaru/">yoshifumi-tsubomoto.github.io/kokodemaru/</a></figcaption></figure>
+      <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges"><path fill="#ffffff" d="M0 0h33v33H0z"/><path stroke="#000000" d="M0 0.5h7m2 0h4m1 0h1m3 0h1m3 0h1m3 0h7M0 1.5h1m5 0h1m1 0h1m3 0h3m1 0h1m3 0h1m1 0h1m3 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h2m3 0h1m2 0h1m3 0h3m1 0h1m1 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h1m2 0h2m4 0h1m2 0h2m1 0h2m1 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m2 0h4m1 0h1m2 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m2 0h2m1 0h1m3 0h3m1 0h3m3 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h3m1 0h1m1 0h1m3 0h1m1 0h1M0 8.5h1m5 0h1m1 0h2m1 0h5m1 0h1m2 0h1m1 0h1m1 0h3m2 0h3M2 9.5h1m7 0h1m1 0h1m2 0h1m1 0h3m3 0h1m4 0h3M1 10.5h3m1 0h2m2 0h1m5 0h1m1 0h1m2 0h2m2 0h1m1 0h1m1 0h1m1 0h2M0 11.5h2m1 0h2m3 0h1m1 0h1m3 0h3m2 0h1m2 0h1m1 0h8M5 12.5h2m1 0h1m2 0h1m1 0h2m1 0h5m3 0h1m1 0h2m4 0h1M1 13.5h3m4 0h1m1 0h5m1 0h5m1 0h2m2 0h2m2 0h3M0 14.5h3m2 0h4m1 0h1m3 0h1m2 0h1m3 0h2m1 0h3m1 0h1m2 0h1M3 15.5h2m3 0h1m1 0h1m1 0h1m1 0h2m9 0h1m1 0h1m2 0h1m1 0h1M1 16.5h1m2 0h1m1 0h1m1 0h2m4 0h1m2 0h1m2 0h1m1 0h1m1 0h2m1 0h2m3 0h1M0 17.5h1m2 0h3m2 0h1m2 0h5m1 0h4m2 0h1m1 0h2m2 0h4M4 18.5h4m5 0h1m1 0h1m3 0h2m1 0h2m3 0h1m1 0h2m1 0h1M2 19.5h2m1 0h1m1 0h2m1 0h2m1 0h6m1 0h1m2 0h4m1 0h3M5 20.5h2m3 0h1m1 0h1m3 0h1m5 0h1m1 0h2m1 0h3m2 0h1M0 21.5h1m1 0h1m2 0h1m4 0h3m1 0h1m1 0h4m1 0h1m1 0h1m4 0h2M0 22.5h1m1 0h1m3 0h3m2 0h1m2 0h3m3 0h3m3 0h1m1 0h1m2 0h1M0 23.5h1m1 0h2m8 0h2m5 0h2m1 0h2m1 0h1m1 0h4m1 0h1M0 24.5h2m2 0h1m1 0h1m1 0h2m1 0h1m2 0h3m7 0h6m2 0h1M8 25.5h1m2 0h6m1 0h3m2 0h2m3 0h1m1 0h1m1 0h1M0 26.5h7m3 0h1m1 0h4m2 0h1m1 0h5m1 0h1m1 0h1m1 0h2M0 27.5h1m5 0h1m4 0h2m10 0h2m3 0h3m1 0h1M0 28.5h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h2m2 0h3m3 0h6m1 0h1M0 29.5h1m1 0h3m1 0h1m2 0h1m6 0h2m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m2 0h2M0 30.5h1m1 0h3m1 0h1m3 0h3m3 0h1m2 0h1m1 0h2m2 0h1m1 0h2m1 0h3M0 31.5h1m5 0h1m2 0h1m1 0h3m1 0h2m2 0h2m1 0h1m3 0h5M0 32.5h7m1 0h1m1 0h1m1 0h1m3 0h2m1 0h1m3 0h5m3 0h1"/></svg>
+<figcaption><b>すぐ試す（体験用のダミーのテスト入り）</b><br><a href="https://yoshifumi-tsubomoto.github.io/kokodemaru/?demo">yoshifumi-tsubomoto.github.io/kokodemaru/?demo</a></figcaption></figure>
+    </div>
+  </div>
+
+  <h2>データの置き場所</h2>
+  <p>答案と成績は、初めから終わりまで、採点する端末の中で扱います。外に出るのは、生徒ダッシュボードと AI の読み取りを使うときだけです。</p>
+  <table class="data">
+    <colgroup><col class="c1"><col class="c2"><col class="c3"></colgroup>
+    <thead><tr><th>データ</th><th>置き場所</th><th>外に送るか</th></tr></thead>
+    <tbody>
+      <tr><td>答案の画像・名簿・点数</td><td>採点する端末のブラウザの中</td><td>送らない</td></tr>
+      <tr><td>バックアップ</td><td>先生が選んだフォルダ（10分おきに自動で保存）</td><td>送らない（フォルダの場所は要相談）</td></tr>
+      <tr><td>生徒ダッシュボードの点数・答案の画像</td><td>学校の Google アカウントのドライブ（学校で Google のアカウントを使っている場合）</td><td>学校のアカウントの中だけ。見られるのは同じ学校のアカウントの人で、生徒は自分の結果だけ</td></tr>
+      <tr><td>返却用 PDF</td><td>先生の端末に保存（生徒ごと、または全員分をまとめた PDF）。印刷して返す</td><td>送らない</td></tr>
+      <tr><td>AI の読み取り（Gemini）</td><td>解答欄（氏名なし）を切り抜いた画像を、学校のアカウントの Gemini に手で渡す（学校で Gemini が使える場合）</td><td>送る（氏名の欄は白く消してから。使うときだけ）</td></tr>
+      <tr><td>AI の読み取り（Claude API）</td><td>解答欄（氏名なし）の画像を、学校の外のサービスに自動で送る</td><td>送る（氏名の欄は白く消してから。使うときだけ）</td></tr>
+    </tbody>
+  </table>
+  <p class="note">AI の読み取りは、初期設定で使うか使わないか選べます。使わなければ、答案は外に出ません。</p>
+
+  <h2>個人情報を守るための決まり</h2>
+  <ul class="rules">
+    <li><b>共用のパソコンでは使わない</b>答案と点数は、使った端末のブラウザの中に残ります。採点は、自分だけが使う端末で行います</li>
+    <li><b>名前を隠して採点できる</b>採点の画面では「受験者 017」のような仮の名前にし、答案の組・番・氏名の欄も白く隠せます</li>
+    <li><b>答案の画像は早く手放す</b>返却と点数の問い合わせの期間が過ぎたら、画像を外します。残るのは点数・名簿・正答例だけです</li>
+    <li><b>生徒ダッシュボードは期間を決めて出す</b>見せる期間が終わったら「公開をやめる」を押します。画像はごみ箱に移り、30日でごみ箱から消えます</li>
+    <li><b>端末からすべて消せる</b>「データと情報管理」の画面から、その端末のココデマルのデータをまとめて消せます</li>
+  </ul>
+
+  <div class="pno">1 / 2</div>
+</div>
+
+<div class="page" contenteditable="true" spellcheck="false">
+  <header>
+    <h1>採点アプリ「ココデマル」の使用について（判断のお願い）</h1>
+    <div class="meta">提出日　　　年　　月　　日<br>申請者</div>
+  </header>
+
+  <h2>許可をお願いしたいこと</h2>
+  <p>次の9つについて、判断をいただけますか。「判断」の欄の□に✓を付け、ご意見があれば右の欄にお書きください。</p>
+  <table class="ask">
+    <colgroup><col class="c1"><col class="c2"><col class="c3"></colgroup>
+    <thead><tr><th>お願いすること</th><th>判断</th><th>ご意見・条件</th></tr></thead>
+    <tbody>
+      <tr><td><span class="no">1.</span>定期考査などの採点と成績の処理にココデマルを使う</td><td class="check"><span>許可</span><span>条件つき</span><br><span>不可</span><span>要相談</span></td><td></td></tr>
+      <tr><td><span class="no">2.</span>生徒ダッシュボードで、生徒に自分の点数と答案の画像を見せる（自分以外の答案は見えません。学校の Google アカウントを使います）</td><td class="check"><span>許可</span><span>条件つき</span><br><span>不可</span><span>要相談</span></td><td></td></tr>
+      <tr><td><span class="no">3.</span>学校のアカウントの Gemini (Chat) に、バラバラにした解答欄（氏名なし）の画像を手動で読ませる</td><td class="check"><span>許可</span><span>条件つき</span><br><span>不可</span><span>要相談</span></td><td></td></tr>
+      <tr><td><span class="no">4.</span>アプリから自動で、Claude API（学校の外の AI）に、バラバラにした解答欄（氏名なし）の画像を読ませる</td><td class="check"><span>許可</span><span>条件つき</span><br><span>不可</span><span>要相談</span></td><td></td></tr>
+      <tr><td><span class="no">5.</span>4に、教育委員会の許可が要りますか</td><td class="check"><span>要る</span><span>要らない</span></td><td></td></tr>
+      <tr><td><span class="no">6.</span>自動バックアップ（生徒の答案もはいります）を、自分の端末の中に置く</td><td class="check"><span>許可</span><span>条件つき</span><br><span>不可</span><span>要相談</span></td><td></td></tr>
+      <tr><td><span class="no">7.</span>自動バックアップを、校務用の共有フォルダに置く</td><td class="check"><span>許可</span><span>条件つき</span><br><span>不可</span><span>要相談</span></td><td></td></tr>
+      <tr><td><span class="no">8.</span>自動バックアップを、学校アカウントのマイドライブに置く</td><td class="check"><span>許可</span><span>条件つき</span><br><span>不可</span><span>要相談</span></td><td></td></tr>
+      <tr><td><span class="no">9.</span>ほかの先生にすすめる、校内研修で紹介する</td><td class="check"><span>許可</span><span>条件つき</span><br><span>不可</span><span>要相談</span></td><td></td></tr>
+    </tbody>
+  </table>
+  <div class="opinion">全体についてのご意見</div>
+
+
+  <div class="sign"><div>確認日 <span></span></div><div>確認者 <span></span></div></div>
+  <div class="pno">2 / 2</div>
+</div>
+</body>
+</html>
