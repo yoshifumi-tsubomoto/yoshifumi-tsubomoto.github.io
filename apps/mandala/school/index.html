@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>学校で共同編集を使う（マンダラ発想法）｜Tsubomoto Lab.</title><meta name="description" content="学校ごとに、自分たち専用の共同編集の場を用意します。手順書を生成 AI に貼ると、1ステップずつ案内してくれます。"><meta property="og:title" content="学校で共同編集を使う（マンダラ発想法）｜Tsubomoto Lab."><meta property="og:description" content="学校ごとに、自分たち専用の共同編集の場を用意します。手順書を生成 AI に貼ると、1ステップずつ案内してくれます。"><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet"><script data-goatcounter="https://tsubomoto-lab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><link rel="stylesheet" href="/_astro/Base.DkMuVB_Q.css"></head><body><header class="site-header"><div class="wrap header-inner"><a href="/" class="brand" aria-label="Tsubomoto Lab. トップへ"><svg class="logo" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="var(--paper)" stroke="var(--navy)" stroke-width="1.5"></circle><ellipse cx="20" cy="20" rx="13" ry="5.2" fill="none" stroke="var(--navy)" stroke-width="1.2" transform="rotate(-30 20 20)"></ellipse><ellipse cx="20" cy="20" rx="13" ry="5.2" fill="none" stroke="var(--teal)" stroke-width="1.2" transform="rotate(30 20 20)"></ellipse><circle cx="20" cy="20" r="3.2" fill="var(--navy)"></circle><circle cx="31.3" cy="13.5" r="2" fill="var(--teal)"></circle></svg><span class="brand-text"><span class="brand-name">Tsubomoto Lab.</span><span class="brand-sub">教室のための、小さなソフトウェア</span></span></a><nav class="nav" aria-label="サイトの案内"><a href="/#apps">アプリ</a><a href="/news/">お知らせ</a><a href="/about/">このサイトについて</a><a href="/search/">検索</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSd9N9QK0rY9jTGNF2HcpDyVbXDLzyhA-qtZ2tM7VUrqhZBQEg/viewform" target="_blank" rel="noopener">連絡</a></nav></div></header><main data-pagefind-body><section class="app-hero slim hue-amber"><div class="wrap"><p class="crumb mono tiny"><a href="/#apps">アプリ</a> / <a href="/apps/mandala/">マンダラ発想法</a> / <a href="/apps/mandala/#install">導入方法</a></p><h1>学校で共同編集を使う</h1><p class="lead">学校ごとに、自分たち専用の共同編集の場を用意します。手順書を生成 AI に貼ると、1ステップずつ案内してくれます。</p></div></section><div class="wrap app-layout"><aside class="spec-card"><div class="mono label">Method data</div><dl class="spec"><dt>難しさ</dt><dd class="stars">★★★</dd><dt>時間</dt><dd>約1〜2時間（はじめの1回）</dd><dt>費用</dt><dd>無料（各サービスの無料プランの範囲）</dd><dt>アカウント</dt><dd>GitHub、Vercel、Supabase、先生の Google アカウント、学校の Google アカウント（学校のアカウントで入るとき）</dd><dt>向いている人</dt><dd>授業でクラスや班の共同編集を使いたい先生（情報担当の先生と一緒に進めるのがおすすめ）</dd><dt>データの場所</dt><dd>学校ごとに用意するクラウド（Supabase）</dd><dt>確かめた日</dt><dd>2026年11月23日</dd></dl></aside><div class="app-main"><div class="callout info"><strong>端末の外にデータを置く方法です。</strong><dl class="callout-list"><dt>外に出るもの</dt><dd>マンダラに書いた文字と、書いた人の表示名・書いた時刻</dd><dt>だれの記録か</dt><dd>生徒のメールアドレスや本名は保存しません。生徒は部屋の合言葉と、自分で決めた表示名で入ります。学校のアカウントで入るときも、アドレスは学校の中で読めない印に変えてから使います</dd><dt>置き場所</dt><dd>学校ごとに用意するクラウド（Supabase）</dd><dt>補足</dt><dd>クラウドは、その学校が用意したものだけを使います。作者のクラウドには届きません。</dd></dl><span class="small">学校の情報管理のきまりで使えるかを確かめてから使ってください。</span></div><article class="prose"><h2 id="しくみ">しくみ</h2>
+<p>学校ごとに、次の3つを用意して共同編集の場を作ります。</p>
+<table>
+<thead>
+<tr>
+<th>用意するもの</th>
+<th>役目</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supabase（無料プラン）</td>
+<td>ログインと、書いた内容の保存</td>
+</tr>
+<tr>
+<td>Vercel（無料プラン）</td>
+<td>アプリを公開する場所</td>
+</tr>
+<tr>
+<td>学校の Google Apps Script（使うときだけ）</td>
+<td>生徒が学校のアカウントで入るときの本人確認。先生かどうかの見分け</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ログインのしかた">ログインのしかた</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>入り方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>先生</td>
+<td>Google アカウントでログイン。または学校のアカウント（先生として登録した人）</td>
+</tr>
+<tr>
+<td>生徒</td>
+<td>先生が開いた「部屋」の6文字の合言葉と、表示名で入る。または学校のアカウント</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>生徒は、メールアドレスも、学校の外のアプリへの Google ログインもいりません</li>
+<li>部屋は24時間で自動で閉じます。先生は、部屋に入った生徒を外せます</li>
+<li>学校のアカウントで入った生徒は、どの Chromebook からでも同じ人として続きが書けます。先生には、その学校の生徒が作ったマンダラが全部見えます</li>
+</ul>
+<h2 id="手順">手順</h2>
+<p>手順書は、<strong>生成 AI に貼って使う形</strong>にしてあります。AI が、画面の操作を1つずつ案内します。</p>
+<ol>
+<li>配布用のリポジトリ（<a href="https://github.com/yoshifumi-tsubomoto/mandala-app-template">mandala-app-template</a>）の <strong><a href="https://github.com/yoshifumi-tsubomoto/mandala-app-template/blob/main/%E5%B0%8E%E5%85%A5%E6%89%8B%E9%A0%86.md">導入手順.md</a></strong> を開く</li>
+<li>右上の <strong>コピー</strong>（Copy raw file）を押して、全部をコピーする</li>
+<li>生成 AI（Claude・ChatGPT・Gemini など）に貼り、「この手順で、1ステップずつ案内してください」と書いて送る</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>すること</th>
+<th>使うサービス</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>アプリのプログラムを、自分の GitHub に写す</td>
+<td>GitHub</td>
+</tr>
+<tr>
+<td>2〜4</td>
+<td>データベースを作り、ログインを設定する</td>
+<td>Supabase・Google Cloud</td>
+</tr>
+<tr>
+<td>5〜7</td>
+<td>アプリを公開して、先生として使ってみる</td>
+<td>Vercel</td>
+</tr>
+<tr>
+<td>8</td>
+<td>学校の GAS を置く（止まらないしくみ・学校のアカウントで入る）</td>
+<td>学校の Google アカウント</td>
+</tr>
+<tr>
+<td>9〜10</td>
+<td>学校のアカウントで入るボタンを出す（使うときだけ）</td>
+<td>Supabase・Vercel</td>
+</tr>
+<tr>
+<td>11〜12</td>
+<td>プライバシーポリシーを直し、生徒で試す</td>
+<td>GitHub・アプリ</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>AI には、パスワードやキーなどの<strong>秘密の値を貼らないで</strong>ください。手順書にも、AI が貼らせないように書いてあります</li>
+<li>困ったときは、マンダラ発想法のページの「要望・不具合のフォーム」からお知らせください</li>
+</ul>
+<h2 id="気をつけること">気をつけること</h2>
+<ul>
+<li>学校で使うときは、学校や設置者のきまりに沿って、使ってよいかを確かめてください</li>
+<li>Supabase の無料プランは、1週間使われないと止まるきまりがあります。<strong>この点は対策済みです</strong>：学校の Google Apps Script が毎日1回（朝4時ごろ）自動で Supabase を呼ぶので、長い休みのあいだも止まりません。動いたかどうかは、Apps Script の設定画面で毎日の記録を見て確かめられます</li>
+</ul>
+</article><p class="tiny muted mono">サービスの画面や料金は変わることがあります（2026年11月23日 に確かめた内容です）。</p><section class="block"><h2 class="h-sm">ほかの導入方法</h2><ul class="link-list"><li><a href="/apps/mandala/demo/"><span>体験モードで、ひとりで使う</span><span class="stars tiny">★☆☆</span></a></li></ul></section></div></div></main><footer class="site-footer"><div class="wrap footer-inner"><div><div class="brand footer-brand"><svg class="logo" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="var(--paper)" stroke="var(--navy)" stroke-width="1.5"></circle><ellipse cx="20" cy="20" rx="13" ry="5.2" fill="none" stroke="var(--navy)" stroke-width="1.2" transform="rotate(-30 20 20)"></ellipse><ellipse cx="20" cy="20" rx="13" ry="5.2" fill="none" stroke="var(--teal)" stroke-width="1.2" transform="rotate(30 20 20)"></ellipse><circle cx="20" cy="20" r="3.2" fill="var(--navy)"></circle><circle cx="31.3" cy="13.5" r="2" fill="var(--teal)"></circle></svg><span class="brand-name">Tsubomoto Lab.</span></div><p class="muted small">中学校の理科教師が、授業と校務の「こまった」から作ったアプリを紹介します。</p></div><ul class="footer-links"><li><a href="/#apps">アプリの一覧</a></li><li><a href="/about/">このサイトについて・アクセス解析</a></li><li><a href="/disclaimer/">免責事項</a></li><li><a href="/#feedback">このサイトへの意見・リクエスト</a></li><li><a href="https://docs.google.com/forms/d/e/1FAIpQLSd9N9QK0rY9jTGNF2HcpDyVbXDLzyhA-qtZ2tM7VUrqhZBQEg/viewform" target="_blank" rel="noopener">連絡・意見のフォーム</a></li><li><a href="https://github.com/yoshifumi-tsubomoto" target="_blank" rel="noopener">GitHub</a></li></ul></div><div class="wrap mono tiny muted footer-note">© 2026 坪本 吉史（中学校 理科）</div></footer><script type="module">var e=matchMedia(`(prefers-reduced-motion: reduce)`).matches,t=matchMedia(`(hover: hover) and (pointer: fine)`).matches;!e&&t&&document.querySelectorAll(`[data-tilt]`).forEach(e=>{let t=Number(e.dataset.tilt)||8,n=0;e.addEventListener(`pointermove`,r=>{let i=e.getBoundingClientRect(),a=(r.clientX-i.left)/i.width,o=(r.clientY-i.top)/i.height;cancelAnimationFrame(n),n=requestAnimationFrame(()=>{e.style.setProperty(`--rx`,`${(.5-o)*t}deg`),e.style.setProperty(`--ry`,`${(a-.5)*t}deg`),e.style.setProperty(`--mx`,`${a*100}%`),e.style.setProperty(`--my`,`${o*100}%`),e.classList.add(`tilting`)})}),e.addEventListener(`pointerleave`,()=>{cancelAnimationFrame(n),e.classList.remove(`tilting`),e.style.setProperty(`--rx`,`0deg`),e.style.setProperty(`--ry`,`0deg`)})});var n=document.querySelectorAll(`.app-card, .principle, .voice, .feature, .install-card, .reuse-card, .reuse-rule, .section-head, .placeholder, .link-list`);if(!e&&`IntersectionObserver`in window){let e=new IntersectionObserver(t=>t.forEach(t=>{t.isIntersecting&&(t.target.classList.add(`shown`),e.unobserve(t.target))}),{rootMargin:`0px 0px -8% 0px`});n.forEach(t=>{let n=t.parentElement?Array.from(t.parentElement.children):[];t.style.setProperty(`--delay`,`${Math.min(n.indexOf(t),5)*90}ms`),t.classList.add(`reveal`),e.observe(t)})}</script></body></html>
